@@ -78,14 +78,6 @@
       </view>
     </view>
     <view class="wallet flex-row" wx:if="{{wallet&&wallet.is_wallet==1}}">
-      <view class="flex-grow-0 wallet-1 flex-x-center flex-y-center" style="{{wallet.re==1?'width:150rpx;':''}}">
-        <view>
-          <view class="flex-x-center">
-            <image src="/images/icon-user-wallet.png" style="width:64rpx;height:64rpx;margin-bottom:20rpx;"></image>
-          </view>
-          <view class="fs-sm">我的钱包</view>
-        </view>
-      </view>
       <view class="flex-grow-0 {{wallet.re==1?'wallet-3':'wallet-2'}} flex-x-center flex-y-center">
         <view class="flex-grow-1 flex-y-center flex-col">
         <image class="flex-grow-0" src="/images/icon-user-integral.png" style="width:64rpx;height:64rpx;margin-bottom:20rpx;"></image>
@@ -98,10 +90,10 @@
       <view class="flex-grow-0 {{wallet.re==1?'wallet-3':'wallet-2'}}  flex-x-center flex-y-center" wx:if="{{wallet.re==1}}">
         <view class="flex-grow-1 flex-y-center flex-col">
           <navigator hoverClass="none" url="/pages/balance/balance">
-            <view class="num-1 flex-x-center">{{user_info.money}}</view>
-            <view class="flex-row num-2 flex-x-center">
-              <image class="flex-grow-0" src="/images/icon-user-balance.png" style="width:26rpx;height:26rpx;margin-right:10rpx;"></image>
+          <image src="/images/icon-user-wallet.png" style="width:64rpx;height:64rpx;margin-bottom:20rpx;"></image>
+            <view class="flex-row num-2 flex-x-center fs-sm">
               <view class="flex-grow-0">余额</view>
+              <view class="num-1 flex-x-center">{{user_info.money}}</view>
             </view>
           </navigator>
         </view>
