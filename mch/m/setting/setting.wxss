@@ -1,0 +1,59 @@
+.form-group-name{
+  height: 90rpx;
+  line-height: 90rpx;
+  padding: 0rpx 20rpx;
+  box-sizing: border-box;
+  font-size:28rpx;
+}
+
+.input-group{
+  height: 104rpx;
+  line-height: 104rpx;
+  padding: 0rpx 20rpx;
+  box-sizing: border-box;
+  background: #fff;
+}
+
+.input-group1{
+  padding: 0rpx 20rpx;
+  box-sizing: border-box;
+  background: #fff;
+}
+
+.marginright{
+  width: 156rpx;
+  font-size:28rpx;
+}
+
+.inputDetail{
+  height: 104rpx;
+  line-height: 104rpx;
+}
+
+.submit-btn{
+  width: 560rpx;
+  height: 88rpx;
+  vertical-align: middle;
+  text-align: center;
+  background: #EA3814;
+  font-size: 28rpx;
+  border-radius: 44rpx;
+  margin: 70rpx auto;
+  line-height: 88rpx;
+  color: #fff;
+}
+
+.review-status{
+  font-size: 36rpx;
+  color: #EA3814;
+  margin: 40rpx 0rpx;
+  text-align: center;
+}
+
+.apply-result{
+  margin-top: 50rpx;
+}
+
+.review-result{
+  text-align: center;
+}

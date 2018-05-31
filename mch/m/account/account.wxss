@@ -1,0 +1,46 @@
+.header-bg {
+  position: absolute;
+  z-index: 0;
+  width: 750rpx;
+}
+
+.headerinfo {
+  position: relative;
+  left: 0rpx;
+  top: 0rpx;
+  z-index: 1;
+  color: #fff;
+  text-align: center;
+}
+
+.headerprice {
+  padding: 40rpx 0rpx 20rpx 0rpx;
+}
+
+.menu-group {
+  position: relative;
+}
+
+.showcash {
+  padding-bottom: 40rpx;
+}
+
+.list {
+  width: 100%;
+  height: 102rpx;
+  padding: 0rpx 20rpx;
+  line-height: 102rpx;
+  background-color: #fff;
+}
+
+.cash-btn {
+  border: 1px solid #fff;
+  width: 140rpx;
+  height: 58rpx;
+  line-height: 58rpx;
+  margin: auto;
+}
+
+.pointer {
+  width: 20rpx;
+}

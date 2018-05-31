@@ -2,7 +2,9 @@ var t = require("../../api.js"),
     a = require("../../area-picker/area-picker.js"),
     e = getApp();
 Page({
-    data: {},
+    data: {
+      show_result:false
+    },
     onLoad: function(i) {
         e.pageOnLoad(this);
         var n = this;
@@ -17,7 +19,7 @@ Page({
         }), e.request({
             url: t.mch.apply,
             success: function(t) {
-                wx.hideLoading(), 0 == t.code && (t.data.apply && (t.data.show_result = !0), n.setData(t.data))
+                wx.hideLoading(), 0 == t.code && (t.data.apply && (t.data.show_result = false), n.setData(t.data))
             }
         })
     },
@@ -111,12 +113,12 @@ Page({
     },
     hideApplyResult: function() {
         this.setData({
-            show_result: !1
+            show_result: false
         })
     },
     showApplyResult: function() {
         this.setData({
-            show_result: !0
+            show_result: true
         })
     }
 });

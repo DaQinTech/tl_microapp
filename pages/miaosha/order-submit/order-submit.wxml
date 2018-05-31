@@ -162,7 +162,7 @@
                     </view>
                     <view class="flex-grow-0 flex-row">
                         <view class="flex-grow-1 num">×{{item.num}}</view>
-                        <view class="flex-grow-0 price">￥:{{item.price}}</view>
+                        <view class="flex-grow-0 price">￥{{item.price}}</view>
                     </view>
                 </view>
             </view>

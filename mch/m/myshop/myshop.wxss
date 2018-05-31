@@ -1,0 +1,23 @@
+.header{
+  background-color: #EA3814;
+  color: #fff;
+}
+.menu-item{
+  float: left;
+  width: 33.3%;
+}
+
+.data-col{
+  text-align: center;
+  background: #E83712;
+  padding: 20rpx;
+}
+
+.block-button{
+  height: 226rpx;
+}
+
+.block-button image{
+  width: 58rpx;
+  margin: 40rpx 0rpx 0rpx 0rpx;
+}
