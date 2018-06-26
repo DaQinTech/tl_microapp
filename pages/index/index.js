@@ -10,11 +10,14 @@ Page({
         play: -1,
         time: 0,
         buy_user: "",
+        sel:"",
         buy_address: "",
         buy_time: 0,
-        buy_type: ""
+        buy_type: "",
+        aclist:[]
     },
     onLoad: function(t) {
+    
         a.pageOnLoad(this), this.loadData(t);
         var e = 0, o = t.user_id, s = decodeURIComponent(t.scene);
         void 0 != o ? e = o : void 0 != s && (e = s), a.loginBindParent({
@@ -80,6 +83,11 @@ Page({
                 }
             },
             complete: function() {
+                    console.log(o.data.cat_list)
+              o.setData({
+                aclist: o.data.cat_list[0].goods_list,
+                sel: o.data.cat_list[0].id
+              })
                 wx.stopPullDownRefresh();
             }
         });
@@ -242,6 +250,16 @@ Page({
                 play: -1
             });
         }).exec();
+    },
+    selac(e){
+      console.log(e)
+      console.log(this.data.cat_list)
+
+      let id = e.currentTarget.dataset.obj.id
+      this.setData({
+        sel:id,
+        aclist: e.currentTarget.dataset.obj.goods_list
+      })
     },
     fullscreenchange: function(t) {
         r = !!t.detail.fullScreen;

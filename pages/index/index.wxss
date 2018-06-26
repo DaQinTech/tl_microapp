@@ -682,3 +682,20 @@
     color: #fff;
     font-size: 10pt;
 }
+.nav .header{
+  padding:0 10rpx;
+  overflow: auto;
+  white-space: nowrap;
+  background: white;
+
+}
+.nav .header text.active{
+  border-bottom:5rpx solid orange;
+}
+.nav .header text{
+  text-align: center;
+  line-height: 100rpx;
+  font-size:30rpx;
+  width:20%;
+  display: inline-block;
+}

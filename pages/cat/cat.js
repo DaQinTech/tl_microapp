@@ -28,7 +28,9 @@ Page({
             var c = wx.getStorageSync("cat_list");
             c && s.setData({
                 cat_list: c,
-                current_cat: null
+                current_cat: null,
+                sel:c[0].id,
+                aclist:c[0]
             }), a.request({
                 url: t.default.cat_list,
                 success: function(t) {
@@ -55,7 +57,9 @@ Page({
             });
         } else s.setData({
             cat_list: s.data.cat_list,
-            current_cat: s.data.current_cat
+            current_cat: s.data.current_cat,
+            sel: s.data.cat_list[0].id,
+            aclist: s.data.cat_list[0]
         });
     },
     childrenCat: function(s) {
