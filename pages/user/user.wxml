@@ -77,7 +77,7 @@
         </view>
       </view>
     </view>
-    <view class="wallet flex-row" wx:if="{{wallet&&wallet.is_wallet==1}}">
+     <!-- <view class="wallet flex-row" wx:if="{{wallet&&wallet.is_wallet==1}}"> 
       <view class="flex-grow-0 {{wallet.re==1?'wallet-3':'wallet-2'}} flex-x-center flex-y-center">
         <view class="flex-grow-1 flex-y-center flex-col">
         <image class="flex-grow-0" src="/images/icon-user-integral.png" style="width:64rpx;height:64rpx;margin-bottom:20rpx;"></image>
@@ -98,7 +98,7 @@
           </navigator>
         </view>
       </view>
-    </view>
+    </view> -->
     <view class="order-block">
       <navigator class="my-order" url="/pages/order/order?status=-1">我的订单</navigator>
       <view class="flex-row">

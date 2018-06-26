@@ -250,7 +250,9 @@ button[plain] {
 }
 
 .fs-sm {
-    font-size: 9pt;
+    font-size:10pt;
+color:#202020;
+
 }
 
 .p-10 {

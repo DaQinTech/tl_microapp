@@ -37,6 +37,14 @@
                     </view>
                 </view>
             </block>
+             <view wx:elif="{{item.name=='search'}}">
+                <view class="search-block">
+                    <navigator url="/pages/search/search">
+                        <image src="/images/icon-search.png"></image>
+                        <text>搜索</text>
+                    </navigator>
+                </view>
+            </view>
             <view wx:if="{{item.name=='banner'}}">
                 <swiper autoplay="true" circular="true" class="banner" duration="300" indicatorDots="true" interval="5000">
                     <swiper-item wx:for="{{banner_list}}">
@@ -47,14 +55,7 @@
                     </swiper-item>
                 </swiper>
             </view>
-            <view wx:elif="{{item.name=='search'}}">
-                <view class="search-block">
-                    <navigator url="/pages/search/search">
-                        <image src="/images/icon-search.png"></image>
-                        <text>搜索</text>
-                    </navigator>
-                </view>
-            </view>
+           
             <view wx:elif="{{item.name=='nav'}}">
                 <view class="nav-icon-list flex-row" wx:if="{{nav_icon_list&&nav_icon_list.length>0}}">
                     <view class="flex-grow-0 nav-icon{{nav_count==1?'-1':''}}" wx:for="{{nav_icon_list}}">
@@ -108,7 +109,7 @@
                 <view class="coupon" wx:if="{{coupon_list.length>0}}">
                     <view class="coupon-title flex-y-center flex-x-center">
                         <view class="flex-y-center title">
-                            <image src="/images/icon-coupon.png"></image>
+                            <!-- <image src="/images/icon-coupon.png"></image> -->
                             <text>专享优惠券</text>
                         </view>
                         <navigator bindtap="hideGetCoupon" class="flex-y-center" url="/pages/coupon-list/coupon-list">
