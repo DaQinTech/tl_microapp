@@ -1,4 +1,4 @@
-var e = "https://sc.kuaiyunma.com/web/index.php?store_id=1&r=api/", r = {
+var e = "https://sc.kuaiyunma.com/web/index.php?store_id=5&r=api/", r = {
     index: e + "default/index",
     default: {
         store: e + "default/store",
