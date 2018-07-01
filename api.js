@@ -79,7 +79,8 @@ var e = "https://sc.kuaiyunma.com/web/index.php?store_id=5&r=api/", r = {
         user_binding: e + "user/user-binding",
         user_hand_binding: e + "user/user-hand-binding",
         user_empower: e + "user/user-empower",
-        sms_setting: e + "user/sms-setting"
+        sms_setting: e + "user/sms-setting",
+        integral_log: e + "user/integral-log"
     },
     share: {
         join: e + "share/join",

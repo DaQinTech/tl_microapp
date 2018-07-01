@@ -1,4 +1,4 @@
-<view class="page {{__page_classes}}">
+<view class="page {{__page_classes}}" wx:if="{{cat_id!=-1}}">
     <include src="/commons/header/header"></include>
     <view class="body after-navber">
         <view class="top-bar">
@@ -67,4 +67,71 @@
         </view>
     </view>
     <include src="/commons/footer/footer"></include>
+</view>
+<view wx:elif="{{cat_id==-1}}">
+  <view>
+    <image class="banner" mode='widthFix' src="/images/banner.png"></image>
+    <view class='integral'>
+      <view class='integral-left'>
+        <view class='intergral-num'>我的积分
+          <text class='textColor'>{{integral}}</text>
+        </view>
+        <view>购买返积分商品,可赚取更多积分哦~</view>
+      </view>
+      <view class='integral-right'>
+        <view catchtap='integral'>积分明细</view>
+      </view>
+    </view>
+    <view class='itemList'>
+      <view class='itemListTitle'>
+        <view class='tabTitle'>
+          <view class="{{currentTab==0 ? 'activeList' : ''}}" data-current="0" bindtap="swichNav">返积分商品</view>
+        </view>
+        <view class='tabTitle'>
+          <view class="{{currentTab==1 ? 'activeList' : ''}}" data-current="1" bindtap="swichNav"> 积分抵扣商品</view>
+        </view>
+      </view>
+    </view>
+    <view class="goods-list" wx:if="{{currentTab==0}}">
+      <view class="no-data-tip" wx:if="{{show_no_data_tip}}">该类目暂无内容</view>
+      <block wx:for="{{goods_list}}">
+        <navigator class="goods-item" openType="navigate" style="font-size:11pt;" url="/pages/goods/goods?id={{item.id}}" wx:if="{{item.give=='1'}}">
+        <block>
+          <image class="goods-pic" mode="aspectFill" src="{{item.pic_url}}"></image>
+          <view class="goods-info" style="padding:5rpx 20rpx;">
+            <text class="mb-10 text-more-2" style="height:2.8em;line-height:1.4;">{{item.name}}</text>
+            <view class='flex-row'>
+              <view class='integral1' wx:if="{{item.integral.forehead!='0%'&& item.integral.forehead!=''}}">积分抵{{item.integral.forehead}}</view>
+              <view class='integral2' wx:if="{{item.integral.give!=0}}">购后返{{item.integral.give}}积分</view>
+            </view>
+            <view class="flex-row">
+              <view class="flex-grow-1" style="color:#ff334b">￥{{item.price}}</view>
+              <view class="flex-grow-0 fs-sm" style="color:#999;">已售{{item.sales}}</view>
+            </view>
+          </view>
+        </block>
+      </navigator>
+      </block>
+    </view>
+
+    <view class="goods-list" wx:if="{{currentTab==1}}">
+      <view class="no-data-tip" wx:if="{{show_no_data_tip}}">该类目暂无内容</view>
+      <block wx:for="{{goods_list}}">
+      <navigator class="goods-item" openType="navigate" style="font-size:11pt;" url="/pages/goods/goods?id={{item.id}}" wx:if="{{item.forehead=='1'}}">
+         <image class="goods-pic" mode="aspectFill" src="{{item.pic_url}}"></image>
+        <view class="goods-info" style="padding:5rpx 20rpx;">
+          <text class="mb-10 text-more-2" style="height:2.8em;line-height:1.4;">{{item.name}}</text>
+          <view class='flex-row'>
+            <view class='integral1' wx:if="{{item.integral.forehead!='0%'&& item.integral.forehead!=''}}">积分抵{{item.integral.forehead}}</view>
+            <view class='integral2' wx:if="{{item.integral.give!=0}}">购后返{{item.integral.give}}积分</view>
+          </view>
+          <view class="flex-row">
+            <view class="flex-grow-1" style="color:#ff334b">￥{{item.price}}</view>
+            <view class="flex-grow-0 fs-sm" style="color:#999;">已售{{item.sales}}</view>
+          </view>
+        </view>
+      </navigator>
+      </block>
+    </view>
+  </view>
 </view>

@@ -144,6 +144,17 @@ Page({
             }
         });
     },
+    gotoStore: function(){
+      var store = wx.getStorageSync("store");
+      console.log(store.locations);
+      var loc = store.locations.split(',');
+      wx.openLocation({
+        latitude: Number(loc[1]),
+        longitude: Number(loc[0]),
+        name: store.name,
+        address: store.address
+      })
+    },
     navigatorClick: function(t) {
         var a = t.currentTarget.dataset.open_type, e = t.currentTarget.dataset.url;
         return "wxapp" != a || (e = function(t) {

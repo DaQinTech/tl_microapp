@@ -1,0 +1,54 @@
+.integral {
+  width: 100%;
+}
+
+.list {
+  display: flex;
+  padding: 20rpx;
+  box-sizing: border-box;
+  background: #fff;
+  margin-bottom: 1px;
+}
+
+.listImg {
+  width: 115rpx;
+}
+
+.listImg image {
+  width: 90rpx;
+  height: 90rpx;
+}
+
+.listTips {
+  width: 430rpx;
+  font-size: 30rpx;
+  line-height: 44rpx;
+}
+
+.listTipsTop {
+  color: #202020;
+}
+
+.listTipsBottom {
+  color: #767676;
+}
+
+.listNum {
+  width: 168rpx;
+  text-align: right;
+  font-size: 30rpx;
+  line-height: 44rpx;
+}
+
+.listNumTop {
+  color: #ea3814;
+}
+
+.listNumBottom {
+  color: #202020;
+}
+
+.hasNoData{
+  text-align: center;
+  padding-top: 100rpx;
+}

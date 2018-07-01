@@ -82,6 +82,7 @@
         "pages/web/login/login",
         "pages/balance/detail",
         "pages/login/login",
+        "pages/integral/integral",
         "mch/m/myshop/myshop",
         "mch/m/setting/setting",
         "mch/m/goods/goods",

@@ -7,10 +7,15 @@ Page({
         cat_list: [],
         goods_list: [],
         sort: 0,
-        sort_type: -1
+        sort_type: -1,
+        // tab切换  
+        currentTab: 0,
     },
     onLoad: function(t) {
         a.pageOnLoad(this), this.loadData(t);
+        this.setData({
+          cat_id: t.cat_id
+        })
     },
     loadData: function(t) {
         var a = this, e = wx.getStorageSync("cat_list"), i = "";
@@ -81,10 +86,14 @@ Page({
                 goods_id: e.data.goods_id
             },
             success: function(t) {
+              for (var i = 0; i < t.data.list.length; i++) {
+                t.data.list[i].integral = JSON.parse(t.data.list[i].integral);
+              }
                 0 == t.code && (0 == t.data.list.length && (i = !0), e.setData({
                     page: o + 1
                 }), e.setData({
-                    goods_list: t.data.list
+                    goods_list: t.data.list,
+                    integral: t.data.integral
                 })), e.setData({
                     show_no_data_tip: 0 == e.data.goods_list.length
                 });
@@ -165,5 +174,23 @@ Page({
     onReady: function() {},
     onHide: function() {},
     onUnload: function() {},
-    onPullDownRefresh: function() {}
+    onPullDownRefresh: function() {},
+    /** 
+ * 点击tab切换 
+ */
+    swichNav: function (e) {
+      var that = this;
+      if (this.data.currentTab === e.target.dataset.current) {
+        return false;
+      } else {
+        that.setData({
+          currentTab: e.target.dataset.current
+        })
+      }
+    },
+    integral: function () {
+      wx.navigateTo({
+        url: '/pages/integral/integral'
+      })
+    }
 });

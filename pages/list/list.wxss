@@ -154,3 +154,100 @@
 .sort-item .sort-icon-up {
     margin-bottom: 5rpx;
 }
+
+.integral1 {
+  font-size: 18rpx;
+  padding: 5rpx;
+  border: 1px solid #ea3814;
+  border-radius: 4rpx;
+  color: #ea3814;
+  margin-right: 10rpx;
+}
+
+.integral2 {
+  font-size: 18rpx;
+  padding: 5rpx;
+  background: #ea3814;
+  border-radius: 4rpx;
+  color: #fff;
+}
+
+.banner {
+  width: 100%;
+  display: block;
+  height: auto;
+}
+
+.integral {
+  width: 100%;
+  display: flex;
+  background: #fff;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+
+.integral-left {
+  font-size: 24rpx;
+  width: 542rpx;
+  line-height: 40rpx;
+}
+
+.intergral-num {
+  color: #383838;
+  font-weight: bold;
+}
+
+.textColor {
+  font-size: 26rpx;
+  font-weight: bold;
+}
+
+.integral-right {
+  width: 168rpx;
+}
+
+.integral-right>view {
+  width: 155rpx;
+  height: 58rpx;
+  float: right;
+  line-height: 58rpx;
+  text-align: center;
+  border: 1px solid #ea3814;
+  color: #ea3814;
+  top: 50%;
+  position: relative;
+  transform: translateY(-50%);
+}
+
+.itemList{
+  margin: 16rpx 0rpx;
+}
+
+.itemListTitle{
+  background: #fff;
+  height: 90rpx;
+  display: flex;
+  font-size: 26rpx;
+  color: #202020;
+}
+
+.activeList{
+  color: #FF3F05;
+  border-bottom: 4rpx solid #FF3F05;
+  margin: auto;
+  width: 198rpx;
+}
+
+.swiper-tab-list {
+  font-size: 30rpx;
+  display: inline-block;
+  width: 33.33%;
+  color: #777;
+}
+
+.tabTitle{
+  width: 50%;
+  text-align: center;
+  line-height: 90rpx;
+}
+
