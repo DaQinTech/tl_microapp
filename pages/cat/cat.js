@@ -28,9 +28,7 @@ Page({
             var c = wx.getStorageSync("cat_list");
             c && s.setData({
                 cat_list: c,
-                current_cat: null,
-                sel:c[0].id,
-                aclist:c[0]
+                current_cat: null
             }), a.request({
                 url: t.default.cat_list,
                 success: function(t) {

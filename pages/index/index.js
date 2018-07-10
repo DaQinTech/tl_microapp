@@ -83,11 +83,6 @@ Page({
                 }
             },
             complete: function() {
-                    console.log(o.data.cat_list)
-              o.setData({
-                aclist: o.data.cat_list[0].goods_list,
-                sel: o.data.cat_list[0].id
-              })
                 wx.stopPullDownRefresh();
             }
         });
