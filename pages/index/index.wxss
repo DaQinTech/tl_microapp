@@ -687,7 +687,7 @@ left:-20rpx;
     color: #fff;
     font-size: 10pt;
 }
-/* .nav .header{
+ .nav .header{
   overflow: auto;
   white-space: nowrap;
   background: white;
@@ -705,4 +705,4 @@ left:-20rpx;
   font-size:30rpx;
   width:20%;
   display: inline-block;
-} */
+} 

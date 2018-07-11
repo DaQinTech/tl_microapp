@@ -94,8 +94,8 @@
                 </view>
             </view>
         </view>
-        <view id="cat" style="padding-top: 120rpx;background: #fff;position:fixed;top:0;width:100%;z-index:40">
-            <view wx:if="{{store.cat_style==-1&&current_cat.list!=undefault}}">
+        <!-- <view id="cat" style="padding-top: 120rpx;background: #fff;position:fixed;top:0;width:100%;z-index:40">
+            <view wx:if="{{store.cat_style==5&&current_cat.list!=undefault}}">
                 <scroll-view class="group-top scroll-view-x">
                     <view class="flex-row flex-y-center">
                         <view class="flex-grow-1">
@@ -106,7 +106,7 @@
                     </view>
                 </scroll-view>
             </view>
-        </view>
+        </view> -->
         <view class="goods-list" style="padding-top:{{height+3}}px;" wx:if="{{store.cat_style==5||store.cat_style==-1}}">
             <view class="no-data-tip" wx:if="{{show_no_data_tip}}">该类目暂无内容</view>
             <navigator class="goods-item" openType="navigate" style="font-size:11pt;" url="/pages/goods/goods?id={{item.id}}" wx:for="{{goods_list}}">

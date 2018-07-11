@@ -11,14 +11,52 @@ Page({
     },
     onLoad: function(t) {
         a.pageOnLoad(this);
-        var e = wx.getStorageSync("store"), s = t.cat_id;
+        var e = wx.getStorageSync("store");
+         s = t.cat_id;
         void 0 !== s && s && (this.data.cat_style = e.cat_style = -1, wx.showLoading({
             title: "正在加载",
             mask: !0
-        }), this.childrenCat(s)), this.setData({
+        })), this.setData({
             store: e
         });
+
+        var c = null;
+        var that = this;
+        if (s != undefined){
+          var list = wx.getStorageSync("cat_list");
+          var store = wx.getStorageSync("store");
+          for(var i = 0; i < list.length; i++){
+            if (list[i].id == s) {
+              list[i].active = true;
+              c = list[i];
+            }else{
+              list[i].active = false;
+            }
+          }
+         // var o = t.currentTarget.offsetLeft, l = a.data.scrollLeft;
+          // l = o - 80;
+         
+
+          that.setData({
+            page: 1,
+            goods_list: [],
+            show_no_data_tip: !1,
+            cat_list: list,
+            current_cat: list,
+            scrollLeft: -1,
+            height: 100,
+            store: store
+          });
+          wx.setStorageSync("cat_list",list)
+          this.list(c.id, s);
+          wx.createSelectorQuery().select("#catall").boundingClientRect(function (t) {
+            that.setData({
+              height: 100
+            });
+          })
+        }
     },
+
     onShow: function() {
         wx.hideLoading(), a.pageOnShow(this), -1 !== this.data.cat_style && this.loadData();
     },
@@ -55,9 +93,7 @@ Page({
             });
         } else s.setData({
             cat_list: s.data.cat_list,
-            current_cat: s.data.current_cat,
-            sel: s.data.cat_list[0].id,
-            aclist: s.data.cat_list[0]
+            current_cat: s.data.current_cat
         });
     },
     childrenCat: function(s) {

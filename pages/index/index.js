@@ -10,11 +10,9 @@ Page({
         play: -1,
         time: 0,
         buy_user: "",
-        sel:"",
         buy_address: "",
         buy_time: 0,
-        buy_type: "",
-        aclist:[]
+        buy_type: ""
     },
     onLoad: function(t) {
     
@@ -257,16 +255,16 @@ Page({
             });
         }).exec();
     },
-    selac(e){
-      console.log(e)
-      console.log(this.data.cat_list)
+    // selac(e){
+    //   console.log(e)
+    //   console.log(this.data.cat_list)
 
-      let id = e.currentTarget.dataset.obj.id
-      this.setData({
-        sel:id,
-        aclist: e.currentTarget.dataset.obj.goods_list
-      })
-    },
+    //   let id = e.currentTarget.dataset.obj.id
+    //   this.setData({
+    //     sel:id,
+    //     aclist: e.currentTarget.dataset.obj.goods_list
+    //   })
+    // },
     fullscreenchange: function(t) {
         r = !!t.detail.fullScreen;
     }
